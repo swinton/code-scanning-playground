@@ -1,0 +1,25 @@
+name: "ESLint analysis"
+
+# Run workflow each time code is pushed to your repository and on a schedule.
+# The scheduled workflow runs every at 00:00 on Sunday UTC time.
+on:
+  push:
+  schedule:
+  - cron: '0 0 * * 0'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run npm install
+      run: npm install
+    # Runs the ESlint code analysis
+    - name: Run ESLint
+      # eslint exits 1 if it finds anything to report
+      run: node_modules/.bin/eslint index.js -f node_modules/@microsoft/eslint-formatter-sarif/sarif.js -o results.sarif || true
+    # Uploads results.sarif to GitHub repository using the upload-sarif action
+    - uses: github/codeql-action/upload-sarif@v1
+      with:
+        # Path to SARIF file relative to the root of the repository
+        sarif_file: results.sarif

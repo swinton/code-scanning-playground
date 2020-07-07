@@ -1,0 +1,25 @@
+{
+  "name": "code-scanning-playground",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swinton/code-scanning-playground.git"
+  },
+  "keywords": [],
+  "author": "Steve Winton <stevewinton@gmail.com> (https://github.com/swinton)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swinton/code-scanning-playground/issues"
+  },
+  "homepage": "https://github.com/swinton/code-scanning-playground#readme",
+  "dependencies": {
+    "@microsoft/eslint-formatter-sarif": "^2.1.5",
+    "eslint": "^7.4.0"
+  }
+}

@@ -25,7 +25,12 @@ This is a template repo, demonstrating GitHub's [Code Scanning capability](https
 
 ## Additional resources
 - [SARIF example output](example.sarif.json)
+- [SARIF specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/sarif-v2.1.0.html)
 - [`microsoft/sarif-tutorials`](https://github.com/microsoft/sarif-tutorials): User-friendly documentation for the SARIF file format
+- [SARIF Validator](https://sarifweb.azurewebsites.net/Validation): View and validate your SARIF files
+- [`Sarif.Multitool`](https://www.nuget.org/packages/Sarif.Multitool/): Multi-purpose command line tool for analyzing and manipulating SARIF files
+- [JSON schema for the SARIF specification](https://docs.oasis-open.org/sarif/sarif/v2.1.0/cos02/schemas/sarif-schema-2.1.0.json)
+- [`ajv-validator/ajv-cli`](https://github.com/ajv-validator/ajv-cli): Command line interface for [`ajv`](https://github.com/epoberezkin/ajv), one of the [fastest json schema validators](https://github.com/ebdrup/json-schema-benchmark)
 - [SARIF support for code scanning](https://docs.github.com/en/github/finding-security-vulnerabilities-and-errors-in-your-code/sarif-support-for-code-scanning)
 - [Example workflow that runs the ESLint analysis tool](https://docs.github.com/en/github/finding-security-vulnerabilities-and-errors-in-your-code/uploading-a-sarif-file-to-github#example-workflow-that-runs-the-eslint-analysis-tool)
 - REST API: https://docs.github.com/en/rest/reference/code-scanning

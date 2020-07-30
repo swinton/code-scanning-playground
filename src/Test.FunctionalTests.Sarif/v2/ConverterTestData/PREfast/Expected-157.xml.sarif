@@ -1,0 +1,252 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26000",
+          "message": {
+            "text": "Overflow using expression 'pMS->m_data[pMS->m_cData]'\nBuffer accessed is buffer\nBuffer is of length 102 elements (4 bytes/element) [size of variable]\nAccessing the element (4 bytes/element) at element offset 102\n\nValues of variables:\nbuffer.MyStruct::m_cData = 101\npMS = &buffer\n\nwhere\nbuffer.MyStruct::m_cData`39 == 101\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test157.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 31
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "TestMyStructBufferOverrun"
+                }
+              ],
+              "properties": {
+                "funcline": "34"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test157.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 34,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test157.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "startColumn": 19
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test157.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 37,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test157.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 37,
+                            "startColumn": 21
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test157.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 39,
+                            "startColumn": 17
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test157.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 40,
+                            "startColumn": 31
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26000",
+          "message": {
+            "text": "Overflow using expression 'ms.m_data[ms.m_cData]'\nBuffer ms.MyStruct::m_data created during call to InitMyStruct on line 46\nBuffer is of length ms.MyStruct::m_cData`46 elements (4 bytes/element) [from type annotation SAL_writableTo(elementCount({parameter 1}->m_cData)) at c:\\somepath\\test157.cpp(8) on function InitMyStruct called at line 46]\nAccessing the element (4 bytes/element) at element offset 1\n\nValues of variables:\nms.MyStruct::m_cData = 1\n\nwhere\nms.MyStruct::m_cData`46 == 1\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test157.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 27
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 1,
+                  "fullyQualifiedName": "TestMyStructBufferOverrun2"
+                }
+              ],
+              "properties": {
+                "funcline": "43"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test157.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 43,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test157.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 45,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test157.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "startColumn": 17
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test157.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "startColumn": 27
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test157.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "TestMyStructBufferOverrun",
+          "decoratedName": "?TestMyStructBufferOverrun@@YAXXZ"
+        },
+        {
+          "fullyQualifiedName": "TestMyStructBufferOverrun2",
+          "decoratedName": "?TestMyStructBufferOverrun2@@YAXXZ"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="AssemblyAttributes">
+    <AssemblyTitle>Test Plugins Library</AssemblyTitle>
+    <Description>Plugins for testing various extensibility points in the SARIF SDK.</Description>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>false</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sarif.WorkItems\Sarif.WorkItems.csproj" />
+    <ProjectReference Include="..\Sarif\Sarif.csproj" />
+    <ProjectReference Include="..\WorkItems\WorkItems.csproj" />
+  </ItemGroup>
+
+</Project>

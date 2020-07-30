@@ -1,0 +1,1224 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26000",
+          "message": {
+            "text": "Overflow using expression 'a[11]'\nBuffer accessed is a\nBuffer is of length 10 elements (4 bytes/element) [size of variable]\nAccessing the element (4 bytes/element) at element offset 11\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test160.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 39,
+                  "startColumn": 15
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "Test1"
+                }
+              ],
+              "properties": {
+                "funcline": "28"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 30,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 33,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 38,
+                            "startColumn": 11
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 39,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26000",
+          "message": {
+            "text": "Overflow using expression 'a[11]'\nBuffer accessed is a\nBuffer is of length 10 elements (4 bytes/element) [size of variable]\nAccessing the element (4 bytes/element) at element offset 11\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test160.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 15
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 1,
+                  "fullyQualifiedName": "Test2"
+                }
+              ],
+              "properties": {
+                "funcline": "50"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 50,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 52,
+                            "startColumn": 20
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 53,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 55,
+                            "startColumn": 11
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 56,
+                            "startColumn": 11
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 57,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 59,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 61,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 64,
+                            "startColumn": 19
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 67,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 68,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26000",
+          "message": {
+            "text": "Overflow using expression 'a[11]'\nBuffer accessed is a\nBuffer is of length 10 elements (4 bytes/element) [size of variable]\nAccessing the element (4 bytes/element) at element offset 11\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test160.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 84,
+                  "startColumn": 15
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 2,
+                  "fullyQualifiedName": "Test3"
+                }
+              ],
+              "properties": {
+                "funcline": "72"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 72,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 74,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 75,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 77,
+                            "startColumn": 11
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 78,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 80,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 83,
+                            "startColumn": 11
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 84,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26000",
+          "message": {
+            "text": "Overflow using expression 'a[11]'\nBuffer accessed is a\nBuffer is of length 10 elements (4 bytes/element) [size of variable]\nAccessing the element (4 bytes/element) at element offset 11\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test160.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 105,
+                  "startColumn": 15
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 3,
+                  "fullyQualifiedName": "Test4"
+                }
+              ],
+              "properties": {
+                "funcline": "94"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 94,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 96,
+                            "startColumn": 22
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 97,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 99,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 101,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 104,
+                            "startColumn": 11
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 105,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26000",
+          "message": {
+            "text": "Overflow using expression 'a[11]'\nBuffer accessed is a\nBuffer is of length 10 elements (4 bytes/element) [size of variable]\nAccessing the element (4 bytes/element) at element offset 11\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test160.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 119,
+                  "startColumn": 15
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 4,
+                  "fullyQualifiedName": "Test5"
+                }
+              ],
+              "properties": {
+                "funcline": "108"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 108,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 110,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 111,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 113,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 115,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 118,
+                            "startColumn": 11
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 119,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26000",
+          "message": {
+            "text": "Overflow using expression 'a[11]'\nBuffer accessed is a\nBuffer is of length 10 elements (4 bytes/element) [size of variable]\nAccessing the element (4 bytes/element) at element offset 11\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test160.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 158,
+                  "startColumn": 15
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 5,
+                  "fullyQualifiedName": "Test2_1"
+                }
+              ],
+              "properties": {
+                "funcline": "147"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 147,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 149,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 150,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 152,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 154,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 157,
+                            "startColumn": 11
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 158,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26000",
+          "message": {
+            "text": "Overflow using expression 'a[11]'\nBuffer accessed is a\nBuffer is of length 10 elements (4 bytes/element) [size of variable]\nAccessing the element (4 bytes/element) at element offset 11\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test160.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 172,
+                  "startColumn": 15
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 6,
+                  "fullyQualifiedName": "Test2_5"
+                }
+              ],
+              "properties": {
+                "funcline": "161"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 161,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 163,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 164,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 166,
+                            "startColumn": 16
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 168,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 171,
+                            "startColumn": 11
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 172,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26000",
+          "message": {
+            "text": "Overflow using expression 'a[11]'\nBuffer accessed is a\nBuffer is of length 10 elements (4 bytes/element) [size of variable]\nAccessing the element (4 bytes/element) at element offset 11\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test160.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 197,
+                  "startColumn": 15
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 7,
+                  "fullyQualifiedName": "Test3_1"
+                }
+              ],
+              "properties": {
+                "funcline": "186"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 186,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 188,
+                            "startColumn": 17
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 189,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 191,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 193,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 196,
+                            "startColumn": 11
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test160.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 197,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test160.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "Test1",
+          "decoratedName": "?Test1@@YAXXZ"
+        },
+        {
+          "fullyQualifiedName": "Test2",
+          "decoratedName": "?Test2@@YAXXZ"
+        },
+        {
+          "fullyQualifiedName": "Test3",
+          "decoratedName": "?Test3@@YAXXZ"
+        },
+        {
+          "fullyQualifiedName": "Test4",
+          "decoratedName": "?Test4@@YAXXZ"
+        },
+        {
+          "fullyQualifiedName": "Test5",
+          "decoratedName": "?Test5@@YAXXZ"
+        },
+        {
+          "fullyQualifiedName": "Test2_1",
+          "decoratedName": "?Test2_1@@YAXXZ"
+        },
+        {
+          "fullyQualifiedName": "Test2_5",
+          "decoratedName": "?Test2_5@@YAXXZ"
+        },
+        {
+          "fullyQualifiedName": "Test3_1",
+          "decoratedName": "?Test3_1@@YAXXZ"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

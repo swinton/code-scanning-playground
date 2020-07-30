@@ -1,0 +1,125 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26061",
+          "message": {
+            "text": "Range postcondition violation\nAnnotation on function RtlEncodeUtf16LE requires that (& result.RtlEncodeUtf16LE)->NewCursorValue >= begin && (& result.RtlEncodeUtf16LE)->NewCursorValue <= end\n[Annotation SAL_satisfies((& result.RtlEncodeUtf16LE)->NewCursorValue >= begin && (& result.RtlEncodeUtf16LE)->NewCursorValue <= end) at c:\\somepath\\test091.cpp(21)]\n\nValues of variables:\nPointer begin is at offset offset(begin)`21 bytes from the start of begin\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test091.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "RtlEncodeUtf16LE"
+                }
+              ],
+              "properties": {
+                "funcline": "21"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test091.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 21,
+                            "startColumn": 34
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test091.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 23,
+                            "startColumn": 38
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test091.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 24,
+                            "startColumn": 24
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test091.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "startColumn": 5
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test091.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "RtlEncodeUtf16LE",
+          "decoratedName": "?RtlEncodeUtf16LE@@YA?AURTL_UCSCHAR_ENCODER_RETURN_VALUE@@EPAE0@Z"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

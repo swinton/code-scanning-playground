@@ -1,0 +1,95 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "CodeScanner",
+          "semanticVersion": "2.1.0"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file.txt"
+          },
+          "mimeType": "text/plain"
+        },
+        {
+          "location": {
+            "uri": "file.txt",
+            "uriBaseId": "SRCROOT"
+          },
+          "mimeType": "text/plain"
+        },
+        {
+          "location": {
+            "uri": "file.txt",
+            "uriBaseId": "TESTROOT"
+          },
+          "mimeType": "text/plain"
+        }
+      ],
+      "results": [
+        {
+          "ruleId": "C1",
+          "message": {
+            "text": "a"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file.txt"
+                }
+              },
+              "properties": {
+                "key": "file.txt"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "C1",
+          "message": {
+            "text": "a"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file.txt",
+                  "uriBaseId": "SRCROOT"
+                }
+              },
+              "properties": {
+                "key": "#SRCROOT#file.txt"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "C1",
+          "message": {
+            "text": "a"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file.txt",
+                  "uriBaseId": "TESTROOT"
+                }
+              },
+              "properties": {
+                "key": "#TESTROOT#file.txt"
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

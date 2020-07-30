@@ -1,0 +1,139 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26018",
+          "message": {
+            "text": "Potential read overflow of null terminated buffer using expression '* str'\nThis is likely to be due to incorrect or insufficient validation of the buffer access\nBuffer str is a parameter to this function declared on line 132\nBuffer is of length nullpos(str)`132 + 1 bytes [length of zero terminated string]\nAccessing the byte at byte offset 1\n\nValues of variables:\nPointer str is at offset 1 bytes from the start of the buffer\n\nwhere\noffset(str)`132 == 0\nnullpos(str)`132 >= 0\n\nOverrun access occurs when\nnullpos(str)`132 <= 0\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test172.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 141,
+                  "startColumn": 12
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "BadNullTerm"
+                }
+              ],
+              "properties": {
+                "funcline": "132"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test172.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 132,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test172.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 136,
+                            "startColumn": 18
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test172.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 136,
+                            "startColumn": 27
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test172.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 138,
+                            "startColumn": 12
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test172.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 141,
+                            "startColumn": 12
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test172.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "BadNullTerm",
+          "decoratedName": "?BadNullTerm@@YAIPAD@Z"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

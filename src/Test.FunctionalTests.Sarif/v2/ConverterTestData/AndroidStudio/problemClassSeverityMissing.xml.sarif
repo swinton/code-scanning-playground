@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "Assertions",
+          "message": {
+            "text": "Assertions are unreliable. Use BuildConfig.DEBUG conditional checks instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "northwindtraders-droid-2/src/main/java/com/northwindtraders/droid/model/Model.java",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 242
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 1,
+                  "fullyQualifiedName": "northwindtraders-droid-2\\com.northwindtraders.droid.model"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "attributeKey": "WARNING_ATTRIBUTES"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "AndroidStudio"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "northwindtraders-droid-2/src/main/java/com/northwindtraders/droid/model/Model.java"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "northwindtraders-droid-2",
+          "kind": "module"
+        },
+        {
+          "name": "com.northwindtraders.droid.model",
+          "fullyQualifiedName": "northwindtraders-droid-2\\com.northwindtraders.droid.model",
+          "parentIndex": 0,
+          "kind": "package"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

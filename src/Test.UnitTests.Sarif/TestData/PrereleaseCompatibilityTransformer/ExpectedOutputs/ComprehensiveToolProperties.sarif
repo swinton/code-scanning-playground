@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "CodeScanner",
+          "fullName": "CodeScanner for EN-US",
+          "version": "2.1.0 optimized release for x86",
+          "semanticVersion": "2.1.0",
+          "dottedQuadFileVersion": "1.2.3.4",
+          "downloadUri": "https://example.com/sensitive_terms.html",
+          "globalMessageStrings": {
+            "noContent": {
+              "text": "This file has no content to review."
+            }
+          },
+          "rules": [
+            {
+              "id": "TEST1001",
+              "messageStrings": {
+                "a": {
+                  "text": "Review all image content for geopolitically sensitive graphics."
+                }
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "TEST1001",
+          "ruleIndex": 0,
+          "message": {
+            "id": "a"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file.txt"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

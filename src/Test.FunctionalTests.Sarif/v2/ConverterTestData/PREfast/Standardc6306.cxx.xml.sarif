@@ -1,0 +1,88 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "6273",
+          "message": {
+            "text": "Non-integer passed as _Param_(2) when an integer is required in call to 'printf' Actual type: 'char *':  if a pointer value is being passed, %p should be used."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///d:/src/sarif-sdk/src/sarif.functionaltests/convertertestdata/prefast/src/standardux/standardc6306.cxx",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 11
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "fd"
+                }
+              ],
+              "properties": {
+                "funcline": "20"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "6306",
+          "message": {
+            "text": "Incorrect call to 'printf': consider using 'vprintf' which accepts a va_list as an argument."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///d:/src/sarif-sdk/src/sarif.functionaltests/convertertestdata/prefast/src/standardux/standardc6306.cxx",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 11
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "fd"
+                }
+              ],
+              "properties": {
+                "funcline": "20"
+              }
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///d:/src/sarif-sdk/src/sarif.functionaltests/convertertestdata/prefast/src/standardux/standardc6306.cxx"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "fd",
+          "decoratedName": "?fd@@YAXHZZ"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

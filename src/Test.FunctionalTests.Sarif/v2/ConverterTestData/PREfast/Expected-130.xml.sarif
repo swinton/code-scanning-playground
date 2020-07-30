@@ -1,0 +1,542 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26070",
+          "message": {
+            "text": "Potential range precondition violation using expression '& b1'\nAssumed __inout annotation on function B::safe1 requires that {parameter 1}->n is <= 3\n  where {parameter 1}->n is & b1\n[Field annotation SAL_range(0, 3) at c:\\somepath\\test130.cpp(67)]\n\nValues of variables:\nb1.B::n = b1.B::n`103\n\nwhere\nb1.B::n`103 >= 0\n\nRange violation occurs when\nb1.B::n`103 <= 2\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test130.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 103,
+                  "startColumn": 13
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "main"
+                }
+              ],
+              "properties": {
+                "funcline": "86"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 88,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 90,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 91,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 92,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 93,
+                            "startColumn": 18
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 94,
+                            "startColumn": 18
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 96,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 97,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 98,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 99,
+                            "startColumn": 18
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 100,
+                            "startColumn": 20
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 102,
+                            "startColumn": 7
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 103,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26070",
+          "message": {
+            "text": "Potential range precondition violation using expression '& b2'\nAssumed __inout annotation on function B::safe requires that {parameter 1}->n is <= 3\n  where {parameter 1}->n is & b2\n[Field annotation SAL_range(0, 3) at c:\\somepath\\test130.cpp(67)]\n\nValues of variables:\nb2.B::n = b2.B::n`106\n\nwhere\nb2.B::n`106 >= 0\n\nRange violation occurs when\nb2.B::n`106 <= 2\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test130.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 106,
+                  "startColumn": 21
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "main"
+                }
+              ],
+              "properties": {
+                "funcline": "86"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 86,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 88,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 90,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 91,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 92,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 93,
+                            "startColumn": 18
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 94,
+                            "startColumn": 18
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 96,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 97,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 98,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 99,
+                            "startColumn": 18
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 100,
+                            "startColumn": 20
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 102,
+                            "startColumn": 7
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 103,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 105,
+                            "startColumn": 7
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 106,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test130.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 106,
+                            "startColumn": 21
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test130.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "main",
+          "decoratedName": "main"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

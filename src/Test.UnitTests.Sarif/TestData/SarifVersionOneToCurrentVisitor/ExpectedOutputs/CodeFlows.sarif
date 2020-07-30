@@ -1,0 +1,171 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Transformer.UnitTest"
+        }
+      },
+      "results": [
+        {
+          "message": {
+            "text": "Some testing occurred."
+          },
+          "codeFlows": [
+            {
+              "message": {
+                "text": "Path from declaration to usage"
+              },
+              "threadFlows": [
+                {
+                  "id": "52",
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///home/buildAgent/src/collections/list.h"
+                          },
+                          "region": {
+                            "startLine": 15,
+                            "snippet": {
+                              "text": "string str = GetFoo();"
+                            }
+                          }
+                        },
+                        "message": {
+                          "text": "Variable \"str\" declared."
+                        }
+                      },
+                      "module": "platform",
+                      "executionOrder": 1,
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///home/buildAgent/src/collections/list.h"
+                          },
+                          "region": {
+                            "startLine": 26,
+                            "snippet": {
+                              "text": "Bar();"
+                            }
+                          }
+                        }
+                      },
+                      "module": "platform",
+                      "state": {
+                        "Foo": {
+                          "text": "bar"
+                        }
+                      },
+                      "executionOrder": 3,
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///home/buildAgent/src/collections/list.h"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "snippet": {
+                              "text": "int length = str.Length;"
+                            }
+                          }
+                        }
+                      },
+                      "module": "platform",
+                      "state": {
+                        "Foo": {
+                          "text": "bar"
+                        }
+                      },
+                      "executionOrder": 5,
+                      "importance": "essential"
+                    }
+                  ]
+                },
+                {
+                  "id": "67",
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///home/buildAgent/src/collections/list.h"
+                          },
+                          "region": {
+                            "startLine": 15,
+                            "snippet": {
+                              "text": "return null;"
+                            }
+                          }
+                        },
+                        "message": {
+                          "text": "Method \"GetFoo\" returns null."
+                        },
+                        "annotations": [
+                          {
+                            "startLine": 40,
+                            "message": {
+                              "text": "This is a test annotation"
+                            }
+                          },
+                          {
+                            "startLine": 240,
+                            "message": {
+                              "text": "This is a test annotation"
+                            }
+                          }
+                        ]
+                      },
+                      "module": "platform",
+                      "nestingLevel": 1,
+                      "executionOrder": 2
+                    }
+                  ]
+                },
+                {
+                  "id": "23",
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///home/buildAgent/src/collections/list.h"
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "snippet": {
+                              "text": "return;"
+                            }
+                          }
+                        }
+                      },
+                      "module": "platform",
+                      "state": {
+                        "Foo": {
+                          "text": "bar"
+                        }
+                      },
+                      "nestingLevel": 1,
+                      "executionOrder": 4,
+                      "importance": "unimportant"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

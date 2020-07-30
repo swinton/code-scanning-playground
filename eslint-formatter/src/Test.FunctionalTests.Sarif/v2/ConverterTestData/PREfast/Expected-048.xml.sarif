@@ -1,0 +1,220 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26000",
+          "message": {
+            "text": "Overflow using expression 'q[n]'\nBuffer q is a parameter to this function declared on line 13\nBuffer is of length offset(q)`13 + 4*n`13 bytes [from annotation SAL_readableTo(elementCount(n)) at c:\\somepath\\test048.cpp(13)]\nAccessing 4 bytes starting at byte offset 4*n`13\n\nValues of variables:\nPointer q is at offset 0 bytes from the start of the buffer\nn = n`13\n\nwhere\noffset(q)`13 == 0\nn`13 >= 1\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test048.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 7
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "g"
+                }
+              ],
+              "properties": {
+                "funcline": "13"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test048.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 13,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test048.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 15,
+                            "startColumn": 7
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26000",
+          "message": {
+            "text": "Overflow using expression 'p'\nBuffer result.new[] created during call to operator new[] on line 16\nBuffer is of length 40 bytes [from annotation _Post_writable_byte_size_(byteCount({parameter 1})) on function operator new[] called at line 16]\nAccessing 160 bytes starting at byte offset 0\nAnnotation on function f requires that {parameter 1} is of length >= {parameter 2} elements (4 bytes/element)\n  where {parameter 1} is p; {parameter 2} is 40\n[Annotation SAL_writableTo(elementCount({parameter 2})) at c:\\somepath\\test048.cpp(5)]\n\n\nValues of variables:\nPointer p is at offset 0 bytes from the start of the buffer\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test048.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "g"
+                }
+              ],
+              "properties": {
+                "funcline": "13"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test048.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 13,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test048.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 15,
+                            "startColumn": 7
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test048.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 16,
+                            "startColumn": 7
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test048.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 16,
+                            "startColumn": 11
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test048.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 16,
+                            "startColumn": 11
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test048.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 17,
+                            "startColumn": 3
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test048.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "g",
+          "decoratedName": "?g@@YAXPAHI@Z"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

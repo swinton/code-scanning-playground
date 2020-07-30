@@ -1,0 +1,20 @@
+pr:
+- '*'
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+
+# Restore NuGet packages
+- task: DotNetCoreCLI@2
+  displayName: Build
+  inputs:
+    command: build
+    projects: src/Sarif.Sdk.sln
+
+- task: DotNetCoreCLI@2
+  displayName: Run unit tests for netstandard2.0
+  inputs:
+    command: test
+    projects: src/Sarif.Sdk.sln

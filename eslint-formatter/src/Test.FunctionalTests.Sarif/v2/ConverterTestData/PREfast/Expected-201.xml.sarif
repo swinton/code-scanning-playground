@@ -1,0 +1,170 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26020",
+          "message": {
+            "text": "Potential read overflow using expression '(this->m_Values)[index]'\nBuffer access is apparently unbounded by the buffer size.  \n\nIn particular: index`12 is not constrained by (this->MyClass::m_Size)`12\n\nBuffer (this->MyClass::m_Values) is a parameter to this function declared on line 12\nBuffer lengths are from an assumed __inout annotation on the parameter\nBuffer is of length (this->MyClass::m_Size)`12 elements (4 bytes/element) [from field annotation SAL_writableTo(elementCount(this->m_Size)) at c:\\somepath\\test201.cpp(32)]\nAccessing the element (4 bytes/element) at element offset index`12\n\nValues of variables:\nPointer (this->MyClass::m_Values) is at offset 0 bytes from the start of the buffer\nPointer this is at offset 0 bytes from the start of this\nindex = index`12\n\nwhere\n(this->MyClass::m_Size)`12 >= 1\nindex`12 >= 0\n\nOverrun access occurs when\n(this->MyClass::m_Size)`12 <= index`12\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test201.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 9
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "MyClass::GetValue"
+                }
+              ],
+              "properties": {
+                "funcline": "12"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test201.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test201.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26017",
+          "message": {
+            "text": "Potential read overflow using expression 'this->m_Values[index]'\nBuffer access is apparently unbounded by the buffer size.  \n\nIn particular: index`38 is not constrained by any constant\n\nBuffer accessed is MyFixedSizeClass::m_Values\nBuffer is of length 10 elements (4 bytes/element) [size of field]\nAccessing the element (4 bytes/element) at element offset index`38\n\nValues of variables:\nPointer this is at offset 0 bytes from the start of this\nindex = index`38\n\nwhere\nindex`38 >= 0\n\nOverrun access occurs when\nindex`38 >= 10\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test201.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 9
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 1,
+                  "fullyQualifiedName": "MyFixedSizeClass::GetValue"
+                }
+              ],
+              "properties": {
+                "funcline": "38"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test201.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 38,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test201.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 40,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test201.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "name": "GetValue",
+          "fullyQualifiedName": "MyClass::GetValue",
+          "decoratedName": "?GetValue@MyClass@@QAEHI@Z"
+        },
+        {
+          "name": "GetValue",
+          "fullyQualifiedName": "MyFixedSizeClass::GetValue",
+          "decoratedName": "?GetValue@MyFixedSizeClass@@QAEHI@Z"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

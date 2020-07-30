@@ -1,0 +1,196 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26000",
+          "message": {
+            "text": "Read overflow using expression '\".xml\"[5]'\nBuffer accessed is constant string \".xml\"\nBuffer is of length 5 bytes [size of constant string]\nAccessing the byte at byte offset 5\n\nwhere\nnullpos(\".xml\")`16 == 4\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test126.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "Unsafe1"
+                }
+              ],
+              "properties": {
+                "funcline": "12"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test126.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test126.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test126.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 16,
+                            "startColumn": 5
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26001",
+          "message": {
+            "text": "Read underflow using expression '\".xml\"[-1]'\nBuffer accessed is constant string \".xml\"\nBuffer is of length 5 bytes [size of constant string]\nAccessing the byte at byte offset -1\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test126.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 1,
+                  "fullyQualifiedName": "Unsafe2"
+                }
+              ],
+              "properties": {
+                "funcline": "19"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test126.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 19,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test126.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 21,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test126.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 23,
+                            "startColumn": 5
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test126.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "Unsafe1",
+          "decoratedName": "?Unsafe1@@YA_NPBD@Z"
+        },
+        {
+          "fullyQualifiedName": "Unsafe2",
+          "decoratedName": "?Unsafe2@@YA_NPBD@Z"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

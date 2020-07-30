@@ -1,0 +1,110 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "unused declaration",
+          "message": {
+            "text": "Method is never used.\r\nPossible resolution: comment\r\nPossible resolution: delete"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/src/main/java/microsoft/androidstudioformatexample/MainActivity.java",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 37
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 2,
+                  "fullyQualifiedName": "app\\microsoft.androidstudioformatexample\\microsoft.androidstudioformatexample.MainActivity java.lang.String ForCanBeForeachExample()"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "WARNING",
+            "attributeKey": "NOT_USED_ELEMENT_ATTRIBUTES"
+          }
+        },
+        {
+          "ruleId": "unused declaration",
+          "message": {
+            "text": "Class is not instantiated.\r\nPossible resolution: comment\r\nPossible resolution: delete"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/src/main/java/microsoft/androidstudioformatexample/NamespaceTypo.java",
+                  "index": 1
+                },
+                "region": {
+                  "startLine": 6
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 3,
+                  "fullyQualifiedName": "app\\microsoft.androidstudioformatexample\\microsoft.androidstudioformatexample.NamespaceTypo"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "WARNING",
+            "attributeKey": "NOT_USED_ELEMENT_ATTRIBUTES"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "AndroidStudio"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "app/src/main/java/microsoft/androidstudioformatexample/MainActivity.java"
+          }
+        },
+        {
+          "location": {
+            "uri": "app/src/main/java/microsoft/androidstudioformatexample/NamespaceTypo.java"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "app",
+          "kind": "module"
+        },
+        {
+          "name": "microsoft.androidstudioformatexample",
+          "fullyQualifiedName": "app\\microsoft.androidstudioformatexample",
+          "parentIndex": 0,
+          "kind": "package"
+        },
+        {
+          "name": "microsoft.androidstudioformatexample.MainActivity java.lang.String ForCanBeForeachExample()",
+          "fullyQualifiedName": "app\\microsoft.androidstudioformatexample\\microsoft.androidstudioformatexample.MainActivity java.lang.String ForCanBeForeachExample()",
+          "parentIndex": 1,
+          "kind": "member"
+        },
+        {
+          "name": "microsoft.androidstudioformatexample.NamespaceTypo",
+          "fullyQualifiedName": "app\\microsoft.androidstudioformatexample\\microsoft.androidstudioformatexample.NamespaceTypo",
+          "parentIndex": 1,
+          "kind": "type"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

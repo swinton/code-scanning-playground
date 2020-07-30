@@ -1,0 +1,2423 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'userguide'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle.properties",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 8
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'jvmargs'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle.properties",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 13
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'Dfile'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle.properties",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 13
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'userguide'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle.properties",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 17
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'dists'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle/wrapper/gradle-wrapper.properties",
+                  "index": 1
+                },
+                "region": {
+                  "startLine": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'dists'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradle/wrapper/gradle-wrapper.properties",
+                  "index": 1
+                },
+                "region": {
+                  "startLine": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'cygwin'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 30
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'msys'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 31
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'uname'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 33
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'CYGWIN'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 34
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'cygwin'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'MINGW'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 40
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'msys'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 41
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'esac'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 43
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'Cygwin'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 45
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'cygwin'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 46
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'cygpath'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 47
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'dirname'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 60
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'dirname'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 64
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'executables'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 73
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'JAVACMD'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 74
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'JAVACMD'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 76
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'JAVACMD'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 78
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'JAVACMD'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 85
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'cygwin'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 93
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'ulimit'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 94
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'ulimit'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 99
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'Xdock'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 110
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'icns'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 110
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'Cygwin'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 113
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'cygwin'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 114
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'cygpath'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 115
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'cygpath'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 116
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'cygpath'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 118
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'ROOTDIRSRAW'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 119
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'maxdepth'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 119
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'mindepth'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 119
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'ROOTDIRSRAW'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 121
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'ROOTDIRS'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 122
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'OURCYGPATTERN'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 125
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'ROOTDIRS'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 125
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'cygpath'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 126
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'CYGPATTERN'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 127
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'OURCYGPATTERN'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 128
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'CYGPATTERN'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 128
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'egrep'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 133
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'OURCYGPATTERN'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 133
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'egrep'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 134
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'eval'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 137
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'cygpath'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 137
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'eval'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 139
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'esac'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 154
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'eval'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 161
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'Dorg'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 162
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'appname'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 162
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'JAVACMD'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew",
+                  "index": 2
+                },
+                "region": {
+                  "startLine": 164
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'setlocal'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 9
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'DIRNAME'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'DIRNAME'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 15
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'DIRNAME'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 17
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'goto'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 20
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'ERRORLEVEL'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 24
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'goto'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 24
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'goto'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 32
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'goto'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 38
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'goto'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 46
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'Windowz'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 49
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'goto'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 51
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'eval'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 52
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'goto'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 52
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'goto'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 60
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'goto'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 63
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'Dorg'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 75
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'appname'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 75
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'ERRORLEVEL'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 79
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'goto'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 79
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'endlocal'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "gradlew.bat",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 88
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "AndroidStudioFormatExample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'androidstudioformatexample'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/build.gradle",
+                  "index": 4
+                },
+                "region": {
+                  "startLine": 8
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 1,
+                  "fullyQualifiedName": "app"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'androidstudioformatexample'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/src/main/AndroidManifest.xml",
+                  "index": 5
+                },
+                "region": {
+                  "startLine": 3
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 1,
+                  "fullyQualifiedName": "app"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'dimens'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/src/main/res/values-w820dp/dimens.xml",
+                  "index": 6
+                },
+                "region": {
+                  "startLine": 2
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 1,
+                  "fullyQualifiedName": "app"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        },
+        {
+          "ruleId": "Typo",
+          "message": {
+            "text": "Typo: In word 'daknis'"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/src/main/java/microsoft/androidstudioformatexample/NamespaceTypo.java",
+                  "index": 7
+                },
+                "region": {
+                  "startLine": 4
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 2,
+                  "fullyQualifiedName": "app\\microsoft.androidstudioformatexample"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "severity": "TYPO",
+            "attributeKey": "TYPO"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "AndroidStudio"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "gradle.properties"
+          }
+        },
+        {
+          "location": {
+            "uri": "gradle/wrapper/gradle-wrapper.properties"
+          }
+        },
+        {
+          "location": {
+            "uri": "gradlew"
+          }
+        },
+        {
+          "location": {
+            "uri": "gradlew.bat"
+          }
+        },
+        {
+          "location": {
+            "uri": "app/build.gradle"
+          }
+        },
+        {
+          "location": {
+            "uri": "app/src/main/AndroidManifest.xml"
+          }
+        },
+        {
+          "location": {
+            "uri": "app/src/main/res/values-w820dp/dimens.xml"
+          }
+        },
+        {
+          "location": {
+            "uri": "app/src/main/java/microsoft/androidstudioformatexample/NamespaceTypo.java"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "AndroidStudioFormatExample",
+          "kind": "module"
+        },
+        {
+          "fullyQualifiedName": "app",
+          "kind": "module"
+        },
+        {
+          "name": "microsoft.androidstudioformatexample",
+          "fullyQualifiedName": "app\\microsoft.androidstudioformatexample",
+          "parentIndex": 1,
+          "kind": "package"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

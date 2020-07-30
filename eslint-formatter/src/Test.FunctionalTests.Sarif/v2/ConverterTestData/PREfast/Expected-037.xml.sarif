@@ -1,0 +1,526 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26035",
+          "message": {
+            "text": "Possible precondition violation due to failure to null terminate string '& b'\nBuffer accessed is b\nAnnotation on function GetLongPathNameA requires that {parameter 2} is null terminated\n  where {parameter 2} is & b [Annotation SAL_nullTerminated at c:\\somepath\\mywin.h(61)]\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test037.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 20
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "f"
+                }
+              ],
+              "properties": {
+                "funcline": "3"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 3,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 6,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 6,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 7,
+                            "startColumn": 20
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26035",
+          "message": {
+            "text": "Possible precondition violation due to failure to null terminate string '(LPCSTR)(& a)'\nBuffer accessed is a\nAnnotation on function GetLongPathNameA requires that {parameter 1} is null terminated\n  where {parameter 1} is (LPCSTR)(& a) [Annotation SAL_nullTerminated at c:\\somepath\\mywin.h(64)]\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test037.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 20
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "f"
+                }
+              ],
+              "properties": {
+                "funcline": "3"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 3,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 6,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 6,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 7,
+                            "startColumn": 20
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26035",
+          "message": {
+            "text": "Possible precondition violation due to failure to null terminate string '& a'\nBuffer accessed is a\nAnnotation on function GetLongPathNameA requires that {parameter 2} is null terminated\n  where {parameter 2} is & a [Annotation SAL_nullTerminated at c:\\somepath\\mywin.h(61)]\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test037.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 20
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 1,
+                  "fullyQualifiedName": "f1"
+                }
+              ],
+              "properties": {
+                "funcline": "10"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 10,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 13,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 13,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "startColumn": 20
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26035",
+          "message": {
+            "text": "Possible precondition violation due to failure to null terminate string '(LPCSTR)(& b)'\nBuffer accessed is b\nAnnotation on function GetLongPathNameA requires that {parameter 1} is null terminated\n  where {parameter 1} is (LPCSTR)(& b) [Annotation SAL_nullTerminated at c:\\somepath\\mywin.h(64)]\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test037.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 20
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 1,
+                  "fullyQualifiedName": "f1"
+                }
+              ],
+              "properties": {
+                "funcline": "10"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 10,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 13,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 13,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test037.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 14,
+                            "startColumn": 20
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test037.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "f",
+          "decoratedName": "?f@@YAXXZ"
+        },
+        {
+          "fullyQualifiedName": "f1",
+          "decoratedName": "?f1@@YAXXZ"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

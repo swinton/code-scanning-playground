@@ -1,0 +1,126 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26035",
+          "message": {
+            "text": "Possible precondition violation due to failure to null terminate string '& _Right->second'\nAccessing unannotated buffer (_Right->std::pair<int,uls_perf_counter_info>::second).uls_perf_counter_info::wzCounterSetName\nAssumed __inout annotation on function std::forward<uls_perf_counter_info> requires that {parameter 1}->wzCounterSetName is null terminated\n  where {parameter 1}->wzCounterSetName is & _Right->second [Field annotation SAL_nullTerminated at d:\\espsrcp\\esp\\tests\\nosal\\test181.cpp(11)]\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/utility",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 156,
+                  "startColumn": 32
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "std::pair<int const ,uls_perf_counter_info>::{ctor}"
+                }
+              ],
+              "properties": {
+                "funcline": "152"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/utility",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 152,
+                            "startColumn": 3
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/utility",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 155,
+                            "startColumn": 32
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/utility",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 155,
+                            "startColumn": 32
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/utility",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 156,
+                            "startColumn": 32
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/utility"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "name": "{ctor}",
+          "fullyQualifiedName": "std::pair<int const ,uls_perf_counter_info>::{ctor}",
+          "decoratedName": "??$?0HUuls_perf_counter_info@@X@?$pair@$$CBHUuls_perf_counter_info@@@std@@QAE@$$QAU?$pair@HUuls_perf_counter_info@@@1@@Z"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

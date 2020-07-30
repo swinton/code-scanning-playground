@@ -1,0 +1,262 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26014",
+          "message": {
+            "text": "Potential overflow using expression 'a[anIndex & 127]'\nThis is likely to be due to incorrect or insufficient validation of the buffer access\nBuffer accessed is a\nBuffer is of length 100 elements (4 bytes/element) [size of variable]\nAccessing the element (4 bytes/element) at element offset {anIndex & 127}`12\n\nValues of variables:\nanIndex = anIndex`7\n\nwhere\nanIndex`7 >= 0\n{anIndex & 127}`12 <= 127\n{anIndex & 127}`12 <= anIndex`7\n{anIndex & 127}`12 >= 0\n{anIndex & 63}`11 <= 63\n{anIndex & 63}`11 <= anIndex`7\n{anIndex & 63}`11 >= 0\n\nOverrun access occurs when\n{anIndex & 127}`12 >= 100\n\nThere are other instances of this error:\nPotential overflow using expression 'a[anIndex & 255]' at line 13\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test014.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 23
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "indexing"
+                }
+              ],
+              "properties": {
+                "funcline": "7"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test014.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 7,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test014.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 9,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test014.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 9,
+                            "startColumn": 17
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test014.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 11,
+                            "startColumn": 23
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test014.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "startColumn": 23
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26014",
+          "message": {
+            "text": "Potential read overflow using expression 'b[anIndex & 255]'\nThis is likely to be due to incorrect or insufficient validation of the buffer access\nBuffer accessed is b\nBuffer is of length 128 elements (4 bytes/element) [size of variable]\nAccessing the element (4 bytes/element) at element offset {anIndex & 255}`13\n\nValues of variables:\nanIndex = anIndex`7\n\nwhere\nanIndex`7 >= 0\n{anIndex & 127}`12 <= 127\n{anIndex & 127}`12 <= anIndex`7\n{anIndex & 127}`12 >= 0\n{anIndex & 255}`13 <= 255\n{anIndex & 255}`13 <= anIndex`7\n{anIndex & 255}`13 >= 0\n{anIndex & 63}`11 <= 63\n{anIndex & 63}`11 <= anIndex`7\n{anIndex & 63}`11 >= 0\n\nOverrun access occurs when\n{anIndex & 255}`13 >= 128\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test014.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 23
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "indexing"
+                }
+              ],
+              "properties": {
+                "funcline": "7"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test014.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 7,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test014.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 9,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test014.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 9,
+                            "startColumn": 17
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test014.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 11,
+                            "startColumn": 23
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test014.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "startColumn": 23
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test014.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 13,
+                            "startColumn": 23
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test014.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "indexing",
+          "decoratedName": "?indexing@@YAXI@Z"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

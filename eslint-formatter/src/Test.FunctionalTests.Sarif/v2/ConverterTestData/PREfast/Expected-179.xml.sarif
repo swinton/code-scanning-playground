@@ -1,0 +1,153 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26002",
+          "message": {
+            "text": "Accessing buffer '(pDigest->_DIGEST_PARAMETER::refstrParam)[0]._STRING::Buffer' of unspecified length.  Please annotate.\n\nIf we assume that the buffer has single element in length, then the checker would report:\nPotential read overflow using expression '(const void *)((pDigest->refstrParam[2]).Buffer)'\nAccessing unannotated buffer (pDigest->_DIGEST_PARAMETER::refstrParam)[0]._STRING::Buffer\nBuffer is of length 1 bytes [assumed because the buffer is unannotated]\nAccessing (pDigest->_DIGEST_PARAMETER::refstrParam)[0]._STRING::Length`46 bytes starting at byte offset 0\nAnnotation on function memcpy requires that {parameter 2} is of length >= {parameter 3} bytes\n  where {parameter 2} is (const void *)((pDigest->refstrParam[2]).Buffer); {parameter 3} is (size_t)((pDigest->refstrParam[2]).Length)\n[Annotation _In_(byteCount({parameter 3}))]\n\n\nValues of variables:\n(pDigest->_DIGEST_PARAMETER::refstrParam)[0]._STRING::Length = (pDigest->_DIGEST_PARAMETER::refstrParam)[0]._STRING::Length`46\nPointer (pDigest->_DIGEST_PARAMETER::refstrParam)[0]._STRING::Buffer is at offset 0 bytes from the start of the buffer\nPointer pDigest is at offset 0 bytes from the start of pDigest\n\nwhere\n(pDigest->_DIGEST_PARAMETER::refstrParam)[0]._STRING::Length`46 <= 8\n(pDigest->_DIGEST_PARAMETER::refstrParam)[0]._STRING::Length`46 >= 1\n\nOverrun access occurs when\n(pDigest->_DIGEST_PARAMETER::refstrParam)[0]._STRING::Length`46 >= 2\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test179.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 15
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "bar"
+                }
+              ],
+              "properties": {
+                "funcline": "44"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test179.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 44,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test179.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "startColumn": 42
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test179.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "startColumn": 95
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test179.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 48,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test179.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 48,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test179.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 51,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test179.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "bar",
+          "decoratedName": "?bar@@YAXPAU_DIGEST_PARAMETER@@@Z"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

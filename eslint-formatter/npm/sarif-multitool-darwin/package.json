@@ -1,0 +1,16 @@
+{
+	"name": "@microsoft/sarif-multitool-darwin",
+	"description": "SARIF Multitool for MacOS (Darwin)",
+	"version": "{version}",
+	"scripts": {
+		"postinstall": "chmod u+x Sarif.Multitool"
+	},
+	"author": "Microsoft",
+	"license": "MIT",
+	"repository": {
+	  "type": "git",
+	  "url": "https://github.com/microsoft/sarif-sdk"
+	},
+	"os": ["darwin"],
+	"bin": "./bin.js"
+}

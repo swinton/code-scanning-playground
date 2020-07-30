@@ -1,0 +1,125 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26035",
+          "message": {
+            "text": "Possible precondition violation due to failure to null terminate string '(PCWSTR)pszText'\nAccessing unannotated buffer pszText\nAnnotation on function SetText requires that {parameter 1} is null terminated\n  where {parameter 1} is (PCWSTR)pszText [Annotation SAL_nullTerminated at c:\\somepath\\test166.cpp(9)]\n\n when function GetText called at line 21 fails.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test166.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 12
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "Test1"
+                }
+              ],
+              "properties": {
+                "funcline": "17"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test166.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 17,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test166.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 19,
+                            "startColumn": 11
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test166.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 21,
+                            "startColumn": 12
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test166.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 22,
+                            "startColumn": 12
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test166.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "Test1",
+          "decoratedName": "?Test1@@YAXXZ"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

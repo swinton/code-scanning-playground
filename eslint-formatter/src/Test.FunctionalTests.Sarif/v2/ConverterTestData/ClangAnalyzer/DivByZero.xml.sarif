@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "Division by zero",
+          "message": {
+            "text": "Division by zero"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "jquant1.c",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 254,
+                  "startColumn": 51
+                }
+              }
+            }
+          ],
+          "properties": {
+            "category": "Logic error",
+            "issue_context_kind": "function",
+            "issueContext": "output_value",
+            "issueHash": "6"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "Clang Analyzer"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "jquant1.c"
+          }
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

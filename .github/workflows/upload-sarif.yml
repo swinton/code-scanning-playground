@@ -17,7 +17,7 @@ jobs:
     # Runs the ESlint code analysis
     - name: Run ESLint
       # eslint exits 1 if it finds anything to report
-      run: node_modules/.bin/eslint index.js -f node_modules/@microsoft/eslint-formatter-sarif/sarif.js -o results.sarif.json || true
+      run: npm run lint || true
     - name: Expose report
       uses: actions/upload-artifact@v2
       with:

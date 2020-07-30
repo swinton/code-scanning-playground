@@ -1,0 +1,168 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26061",
+          "message": {
+            "text": "Range postcondition violation\nThe function has a __success annotation that is satisfied\nAnnotation on function MyAPI3 requires that * p == _Old_((* p)) + 1\n[Annotation SAL_satisfies(* p == _Old_((* p)) + 1) at c:\\somepath\\test169.cpp(19)]\n\nValues of variables:\n(*p) = (*p)`19\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test169.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "MyAPI3"
+                }
+              ],
+              "properties": {
+                "funcline": "19"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test169.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 19,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test169.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 21,
+                            "startColumn": 5
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26061",
+          "message": {
+            "text": "Range postcondition violation\nThe function has a __success annotation that is satisfied\nAnnotation on function MyAPI4 requires that * p is == _Old_((* p)) + 1\n[Annotation SAL_relop(\"==\", _Old_((* p)) + 1) at c:\\somepath\\test169.cpp(25)]\n\nValues of variables:\n(*p) = (*p)`25\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test169.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 1,
+                  "fullyQualifiedName": "MyAPI4"
+                }
+              ],
+              "properties": {
+                "funcline": "25"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test169.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 25,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test169.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 27,
+                            "startColumn": 5
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test169.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "MyAPI3",
+          "decoratedName": "?MyAPI3@@YAJPAH@Z"
+        },
+        {
+          "fullyQualifiedName": "MyAPI4",
+          "decoratedName": "?MyAPI4@@YAJPAH@Z"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

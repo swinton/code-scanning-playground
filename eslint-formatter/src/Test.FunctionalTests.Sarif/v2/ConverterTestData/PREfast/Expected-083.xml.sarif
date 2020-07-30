@@ -1,0 +1,111 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26000",
+          "message": {
+            "text": "Overflow using expression 'p[1]'\nBuffer p is a parameter to this function declared on line 3\nBuffer is of length offset(p)`3 + cb`3 - 3*{(cb`3 + 2) / 3}`3 + 3 bytes [from annotation SAL_writableTo(elementCount(((cb + 2) - ((cb + 2) / 3) * 3) + 1)) at c:\\somepath\\test083.cpp(3)]\nAccessing the byte at byte offset 1\n\nValues of variables:\nPointer p is at offset 0 bytes from the start of the buffer\n\nwhere\noffset(p)`3 == 0\n{(cb`3 + 2) % 3}`3 == 0\n{cb % 3}`5 == 1\ncb`3 + 2 == 3*{(cb`3 + 2) / 3}`3 + {(cb`3 + 2) % 3}`3\n3*{(cb`3 + 2) / 3}`3 <= cb`3 + 2\ncb`3 >= 1\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test083.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "f"
+                }
+              ],
+              "properties": {
+                "funcline": "3"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test083.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 3,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test083.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 5,
+                            "startColumn": 16
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test083.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 6,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test083.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "f",
+          "decoratedName": "?f@@YAXPADI@Z"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

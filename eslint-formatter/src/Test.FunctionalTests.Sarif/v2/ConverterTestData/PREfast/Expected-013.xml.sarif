@@ -1,0 +1,711 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26000",
+          "message": {
+            "text": "Overflow using expression 'a[result.question.3]'\nBuffer accessed is a\nBuffer is of length 100 elements (4 bytes/element) [size of variable]\nAccessing the element (4 bytes/element) at element offset anIndex`8\n\nValues of variables:\nresult.question.3 = anIndex`8\n\nwhere\nanIndex`8 <= 127\nanIndex`8 >= 100\n\nThere are other instances of this error:\nOverflow using expression 'a[result.question.4]' at line 14\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test013.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 36
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "indexing"
+                }
+              ],
+              "properties": {
+                "funcline": "8"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 8,
+                            "startColumn": 5
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 10,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "startColumn": 26
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "startColumn": 33
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "startColumn": 33
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 13,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 13,
+                            "startColumn": 21
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 13,
+                            "startColumn": 36
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26007",
+          "message": {
+            "text": "Possibly incorrect single element annotation on buffer\nRead overflow using expression '* x'\nBuffer x is a parameter to this function declared on line 24\nBuffer lengths are from an assumed __inout annotation on the parameter\nBuffer is of length offset(x)`24 + 4 bytes [from annotation valid(elementCount(1)) at c:\\somepath\\test013.cpp(24)]\nAccessing 4 bytes starting at byte offset 4\n\nValues of variables:\nPointer x is at offset 4 bytes from the start of the buffer\n\nThere are other instances of this error:\nPossibly incorrect single element annotation on buffer at line 31\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test013.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 13
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 1,
+                  "fullyQualifiedName": "unannotated"
+                }
+              ],
+              "properties": {
+                "funcline": "24"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 24,
+                            "startColumn": 5
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 26,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 26,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 27,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 27,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 29,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 29,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26003",
+          "message": {
+            "text": "Writing to buffer 'result.unannotatedMalloc'34' of unspecified length.  Please annotate.\n\nIf we assume that the buffer has single element in length, then the checker would report:\nPotential overflow using expression 'g[2]'\nBuffer result.unannotatedMalloc created during call to unannotatedMalloc on line 34\nBuffer is of length 0 bytes [assumed because the buffer is unannotated]\nAccessing 4 bytes starting at byte offset 8\n\nValues of variables:\nPointer g is at offset 0 bytes from the start of the buffer\n\nOverrun access occurs when\noffset(result.unannotatedMalloc)`34 == 0\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test013.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 37,
+                  "startColumn": 14
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 1,
+                  "fullyQualifiedName": "unannotated"
+                }
+              ],
+              "properties": {
+                "funcline": "24"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 24,
+                            "startColumn": 5
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 26,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 26,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 27,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 27,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 29,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 29,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 30,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 30,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "startColumn": 16
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 32,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 32,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 33,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 33,
+                            "startColumn": 13
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 34,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 34,
+                            "startColumn": 39
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 34,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test013.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 37,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test013.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "indexing",
+          "decoratedName": "?indexing@@YAHI@Z"
+        },
+        {
+          "fullyQualifiedName": "unannotated",
+          "decoratedName": "?unannotated@@YAHPAH@Z"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26051",
+          "message": {
+            "text": "Function with irreducible control flow graph.\nESPX can only perform limited analysis of functions with irreducible control flow graph.\nThe function contains a loop with multiple entry points which usually indicates a poorly structured function.\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test085.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 6
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "Irreducible"
+                }
+              ],
+              "properties": {
+                "funcline": "5"
+              }
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test085.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "Irreducible",
+          "decoratedName": "?Irreducible@@YAXH@Z"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

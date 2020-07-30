@@ -1,0 +1,112 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "CodeScanner",
+          "semanticVersion": "2.1.0",
+          "globalMessageStrings": {
+            "noContent": {
+              "text": "This file has no content to review."
+            }
+          },
+          "rules": [
+            {
+              "id": "SHARED-ID",
+              "messageStrings": {
+                "a": {
+                  "text": "Review all image content for geopolitically sensitive graphics."
+                }
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              }
+            },
+            {
+              "id": "SHARED-ID",
+              "messageStrings": {
+                "a": {
+                  "text": "Review all plaintext content for geopolitically sensitive terms."
+                }
+              }
+            },
+            {
+              "id": "SHARED-ID",
+              "messageStrings": {
+                "a": {
+                  "text": "Review strings extracted from binaries for geopolitically sensitive terms."
+                }
+              },
+              "defaultConfiguration": {
+                "enabled": false,
+                "level": "note"
+              }
+            }
+          ]
+        }
+      },
+      "conversion": {
+        "tool": {
+          "driver": {
+            "name": "CodeScanner converter 1.5"
+          }
+        }
+      },
+      "results": [
+        {
+          "ruleId": "SHARED-ID",
+          "ruleIndex": 1,
+          "message": {
+            "id": "a"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file.txt"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "SHARED-ID",
+          "ruleIndex": 1,
+          "kind": "notApplicable",
+          "level": "none",
+          "message": {
+            "id": "noContent"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "empty_file.txt"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "SHARED-ID",
+          "ruleIndex": 0,
+          "message": {
+            "id": "a"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file.png"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

@@ -14,8 +14,24 @@
                 "text": "disallow unused variables"
               },
               "helpUri": "https://eslint.org/docs/rules/no-unused-vars",
+              "help": {
+                "text": "https://eslint.org/docs/rules/no-unused-vars"
+              },
               "properties": {
                 "category": "Variables"
+              }
+            },
+            {
+              "id": "no-sparse-arrays",
+              "shortDescription": {
+                "text": "disallow sparse arrays"
+              },
+              "helpUri": "https://eslint.org/docs/rules/no-sparse-arrays",
+              "help": {
+                "text": "https://eslint.org/docs/rules/no-sparse-arrays"
+              },
+              "properties": {
+                "category": "Possible Errors"
               }
             }
           ]
@@ -50,6 +66,50 @@
           ],
           "ruleId": "no-unused-vars",
           "ruleIndex": 0
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "'colors' is assigned a value but never used."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/runner/work/code-scanning-playground/code-scanning-playground/index.js",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 5
+                }
+              }
+            }
+          ],
+          "ruleId": "no-unused-vars",
+          "ruleIndex": 0
+        },
+        {
+          "level": "error",
+          "message": {
+            "text": "Unexpected comma in middle of array."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///home/runner/work/code-scanning-playground/code-scanning-playground/index.js",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 14
+                }
+              }
+            }
+          ],
+          "ruleId": "no-sparse-arrays",
+          "ruleIndex": 1
         }
       ]
     }

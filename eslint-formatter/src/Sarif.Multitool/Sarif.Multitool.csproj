@@ -1,0 +1,95 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+
+    <!-- To Publish single-file exes, run: 
+      dotnet publish Sarif.Multitool.csproj -c Release -f netcoreapp3.1 -r win-x64
+      dotnet publish Sarif.Multitool.csproj -c Release -f netcoreapp3.1 -r linux-x64
+      dotnet publish Sarif.Multitool.csproj -c Release -f netcoreapp3.1 -r osx-x64
+
+      We use [Condition="'$(RuntimeIdentifier)' != ''"] to identify settings used only for these builds.      
+    -->
+
+    <!-- Publish single-file exe -->
+    <PublishSingleFile Condition="'$(RuntimeIdentifier)' != ''">true</PublishSingleFile>
+
+    <!-- Seeing assembly load failures with trimmed exe, but not without. On some machines, for some commands. :/ -->
+    <!-- <PublishTrimmed Condition="'$(RuntimeIdentifier)' != ''">true</PublishTrimmed> -->
+
+    <!-- Publish 'ready-to-run' on Windows (Linux/Mac not yet supported) -->
+    <PublishReadyToRun Condition="'$(RuntimeIdentifier)' == 'win-x64'">true</PublishReadyToRun>   
+  </PropertyGroup>
+
+  <!-- PackAsTool is supported/recommended for .NET Core >= 2.1 -->
+  <PropertyGroup Condition="'$(TargetFramework)' != 'net461'">
+    <PackAsTool>true</PackAsTool>
+  </PropertyGroup>
+
+  <PropertyGroup Label="AssemblyAttributes">
+    <AssemblyTitle>SARIF Multitool</AssemblyTitle>
+    <Description>Command line tool to perform transformations of input files to SARIF.</Description>
+  </PropertyGroup>
+
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), build.props))\build.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.1;netcoreapp2.1;net461</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.7.82" />
+    <PackageReference Include="Microsoft.Json.Pointer" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Json.Schema" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Json.Schema.Validation" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sarif\Sarif.csproj" />
+    <ProjectReference Include="..\Sarif.Driver\Sarif.Driver.csproj" />
+    <ProjectReference Include="..\Sarif.WorkItems\Sarif.WorkItems.csproj" />
+    <ProjectReference Include="..\Sarif.Converters\Sarif.Converters.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="MultitoolResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MultitoolResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Rules\RuleResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RuleResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="MultitoolResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MultitoolResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Rules\RuleResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RuleResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include=".\DotnetToolSettings.xml" CopyToOutputDirectory="PreserveNewest" />
+    <EmbeddedResource Include="$(MsBuildThisFileDirectory)..\Sarif\Schemata\sarif-$(SchemaVersionAsPublishedToSchemaStoreOrg).json" Link="sarif-2.1.0.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory Condition="'$(Configuration)' == 'Debug'">PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.local.json">
+      <CopyToOutputDirectory Condition="'$(Configuration)' == 'Debug'">PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="default.configuration.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,689 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="AssemblyAttributes">
+    <AssemblyTitle>SARIF Library Functional Tests</AssemblyTitle>
+  </PropertyGroup>
+
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), build.props))\build.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.1</TargetFrameworks>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="v2\ConverterTestData\FortifyFpr\src\ContentFileViewModel.cs" />
+    <Compile Remove="v2\ConverterTestData\FortifyFpr\src\Controllers\ContentFileHandlingController.cs" />
+    <Compile Remove="v2\ConverterTestData\FortifyFpr\src\DocumentValidator.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(SolutionDir)\Test.Data\Multitool\ValidationRules\Inputs\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(SolutionDir)\Sarif\Schemata\sarif-$(SchemaVersionAsPublishedToSchemaStoreOrg).json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="$(SolutionDir)\Sarif\Schemata\sarif-external-property-file-$(SchemaVersionAsPublishedToSchemaStoreOrg).json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="$(SolutionDir)\Test.FunctionalTests.Sarif\v2\**\*.sarif" CopyToOutputDirectory="PreserveNewest" LinkBase="v2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="TestData\Multitool\ValidationCommand\**" />
+    <EmbeddedResource Remove="TestData\Multitool\ValidationCommand\**" />
+    <None Remove="TestData\Multitool\ValidationCommand\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="TestData\Multitool\ValidateCommand\**\*.*" />
+    <EmbeddedResource Include="TestData\Multitool\ValidateCommand\**\*.*" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.10.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Moq" Version="4.13.1" />
+    <PackageReference Include="System.Collections.Immutable" Version="1.7.0" />
+    <PackageReference Include="System.Composition" Version="1.4.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.console" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sarif\Sarif.csproj" />
+    <ProjectReference Include="..\Sarif.Driver\Sarif.Driver.csproj" />
+    <ProjectReference Include="..\Sarif.Multitool\Sarif.Multitool.csproj" />
+    <ProjectReference Include="..\Sarif.Converters\Sarif.Converters.csproj" />
+    <ProjectReference Include="..\Test.Utilities.Sarif\Test.Utilities.Sarif.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Ensure *all* v1 and v2 TestData is copied to the Output Directory -->
+    <None Update="v1\**\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="v2\**\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="v1\ConverterTestData\StaticDriverVerifier\check\checkirpmjpnp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="v1\ConverterTestData\PREfast\*.*" />
+    <None Remove="TestData\Partitioning\FilterByPredicate\ExpectedOutputs\AlwaysFalsePredicate.sarif" />
+    <None Remove="TestData\Partitioning\FilterByPredicate\ExpectedOutputs\RuleIdPredicate.sarif" />
+    <None Remove="TestData\Partitioning\FilterByPredicate\Inputs\FilterByPredicate.sarif" />
+    <None Remove="TestData\Partitioning\Partition\ExpectedOutputs\TrivialPartitionFunction.sarif" />
+    <None Remove="TestData\Partitioning\Partition\ExpectedOutputs\TST0001.sarif" />
+    <None Remove="TestData\Partitioning\Partition\ExpectedOutputs\TST0002.sarif" />
+    <None Remove="TestData\Partitioning\Partition\ExpectedOutputs\TST9999.sarif" />
+    <None Remove="TestData\Partitioning\Partition\Inputs\Partition.sarif" />
+    <Content Include="v1\ConverterTestData\StaticDriverVerifier\cancelspinlock_bug1.tt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="v1\ConverterTestData\StaticDriverVerifier\checkadddevice_bug1.tt">
+      <LastGenOutput>checkadddevice_bug1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="v1\ConverterTestData\StaticDriverVerifier\checkdriverunload_bug1.tt">
+      <LastGenOutput>checkdriverunload_bug1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="v1\ConverterTestData\StaticDriverVerifier\checkirpmjpnp_bug1.tt">
+      <LastGenOutput>checkirpmjpnp_bug1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="v1\ConverterTestData\StaticDriverVerifier\dispatchroutine_bug1.tt">
+      <LastGenOutput>dispatchroutine_bug1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="v1\ConverterTestData\StaticDriverVerifier\iocompletion_bug1.tt">
+      <LastGenOutput>iocompletion_bug1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="v1\ConverterTestData\StaticDriverVerifier\iodpcroutine_bug1.tt">
+      <LastGenOutput>iodpcroutine_bug1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="v1\ConverterTestData\StaticDriverVerifier\isrroutine_bug1.tt">
+      <LastGenOutput>isrroutine_bug1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="v1\ConverterTestData\StaticDriverVerifier\sdv-harness.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="v1\ConverterTestData\StaticDriverVerifier\isrroutine_bug1.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>isrroutine_bug1.tt</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\AndroidStudio\singleIssue.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>singleIssue.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\AndroidStudio\singleIssueWithHints.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>singleIssueWithHints.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\ClangAnalyzer\FileNumberCoverage.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FileNumberCoverage.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\Fortify\bannedAPIs_java.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>bannedAPIs_java.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\Fortify\src\bannedAPIs.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>bannedAPIs.java</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\AB_IrrelevantBranch.cpp.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AB_IrrelevantBranch.cpp.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\AB_IrrelevantSwitch.cpp.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AB_IrrelevantSwitch.cpp.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\AM_BranchAndSetValue.cpp.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AM_BranchAndSetValue.cpp.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\AN_Basic_C6387.cpp.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AN_Basic_C6387.cpp.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\AN_FunctionAndInAnnotations.cpp.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AN_FunctionAndInAnnotations.cpp.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\C28182Example.cpp.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>C28182Example.cpp.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-011.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-011.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-021.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-021.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-022.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-022.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-036.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-036.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-038-amd64.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-038-amd64.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-039.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-039.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-065.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-065.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-067.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-067.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-075.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-075.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-076.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-076.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-078.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-078.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-102.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-102.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-122.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-122.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-130.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-130.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-138.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-138.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-146.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-146.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-170.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-170.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-197-amd64.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-197-amd64.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-198-amd64.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-198-amd64.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-205-amd64.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-205-amd64.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\Expected-205.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Expected-205.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\RelevantKeyEvents2.cpp.xml.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RelevantKeyEvents2.cpp.xml.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\src\C6001\expects.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>expects.txt</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\src\C6200\C6200Example.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>C6200Example.cpp</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\src\ExpectedOutput\AA_PropertyAlias.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AA_PropertyAlias.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\src\ExpectedOutput\AM_BranchAndMaybeZero.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AM_BranchAndMaybeZero.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\PREfast\TFS373273.cpp.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TFS373273.cpp.xml</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\StaticDriverVerifier\checkirpmjpnp_bug1.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>checkirpmjpnp_bug1.tt</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\StaticDriverVerifier\src\sdv\rules\wdm\cancelspinlock.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>cancelspinlock.slic</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\StaticDriverVerifier\src\sdv\rules\wdm\startioroutine.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>startioroutine.h</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\TSLint\TSLint-03.json.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TSLint-03.json.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\ConverterTestData\TSLint\TSLint-04.json.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>TSLint-04.json.sarif</DependentUpon>
+    </Compile>
+    <Compile Update="v2\SpecExamples\RecommendedWithSource.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RecommendedWithSource.sarif</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="default.configuration.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="v1\ConverterTestData\Pylint\PyLint-01.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="v1\ConverterTestData\Pylint\PyLint-01.json.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="v1\ConverterTestData\StaticDriverVerifier\cancelspinlock_bug1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="v1\ConverterTestData\StaticDriverVerifier\checkadddevice_bug1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="v1\ConverterTestData\StaticDriverVerifier\checkdriverunload_bug1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="v1\ConverterTestData\StaticDriverVerifier\checkirpmjpnp_bug1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="v1\ConverterTestData\StaticDriverVerifier\dispatchroutine_bug1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="v1\ConverterTestData\StaticDriverVerifier\iocompletion_bug1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="v1\ConverterTestData\StaticDriverVerifier\iodpcroutine_bug1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="v1\ConverterTestData\StaticDriverVerifier\isrroutine_bug1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>isrroutine_bug1.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  
+  <!-- ############-->
+  <ItemGroup>
+    <None Include="v2\ConverterTestData\PREfast\AM_BranchAndSetValue.cpp.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AM_BranchAndSetValue.cpp.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\AN_Basic_C6387.cpp.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AN_Basic_C6387.cpp.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\C28182Example.cpp.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>C28182Example.cpp.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-011.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-011.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-036.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-036.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-038-amd64.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-038-amd64.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-065.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-065.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-066.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-067.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-067.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-102.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-102.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-122.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-122.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-130.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-130.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-138.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-138.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-146.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-146.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-170.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-170.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-197-amd64.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-197-amd64.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-198-amd64.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-198-amd64.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\RelevantKeyEvents2.cpp.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RelevantKeyEvents2.cpp.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\TSLint\TSLint-03.json.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TSLint-03.json.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\TSLint\TSLint-04.json.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TSLint-04.json.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\ClangAnalyzer\FileNumberCoverage.xml.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FileNumberCoverage.xml.cs</LastGenOutput>
+    </None>
+    <None Include="v2\SpecExamples\RecommendedWithSource.sarif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RecommendedWithSource.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\AndroidStudio\singleIssue.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>singleIssue.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\AndroidStudio\singleIssueWithHints.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>singleIssueWithHints.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\Fortify\bannedAPIs_java.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>bannedAPIs_java.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="v2\ConverterTestData\StaticDriverVerifier\check\checkirpmjpnp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="v2\ConverterTestData\StaticDriverVerifier\cancelspinlock_bug1.tt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="v2\ConverterTestData\StaticDriverVerifier\checkadddevice_bug1.tt">
+      <LastGenOutput>checkadddevice_bug1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="v2\ConverterTestData\StaticDriverVerifier\checkdriverunload_bug1.tt">
+      <LastGenOutput>checkdriverunload_bug1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="v2\ConverterTestData\StaticDriverVerifier\checkirpmjpnp_bug1.tt">
+      <LastGenOutput>checkirpmjpnp_bug1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="v2\ConverterTestData\StaticDriverVerifier\dispatchroutine_bug1.tt">
+      <LastGenOutput>dispatchroutine_bug1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="v2\ConverterTestData\StaticDriverVerifier\iocompletion_bug1.tt">
+      <LastGenOutput>iocompletion_bug1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="v2\ConverterTestData\StaticDriverVerifier\iodpcroutine_bug1.tt">
+      <LastGenOutput>iodpcroutine_bug1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="v2\ConverterTestData\StaticDriverVerifier\isrroutine_bug1.tt">
+      <LastGenOutput>isrroutine_bug1.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="v2\ConverterTestData\StaticDriverVerifier\sdv-harness.c" />
+    <EmbeddedResource Include="TestData\Partitioning\FilterByPredicate\ExpectedOutputs\AlwaysFalsePredicate.sarif" />
+    <EmbeddedResource Include="TestData\Partitioning\FilterByPredicate\ExpectedOutputs\RuleIdPredicate.sarif" />
+    <EmbeddedResource Include="TestData\Partitioning\FilterByPredicate\ExpectedOutputs\AlwaysTruePredicate.sarif" />
+    <EmbeddedResource Include="TestData\Partitioning\FilterByPredicate\Inputs\FilterByPredicate.sarif" />
+    <EmbeddedResource Include="TestData\Partitioning\Partition\ExpectedOutputs\TrivialPartitionFunction.sarif" />
+    <EmbeddedResource Include="TestData\Partitioning\Partition\ExpectedOutputs\TST0001.sarif" />
+    <EmbeddedResource Include="TestData\Partitioning\Partition\ExpectedOutputs\TST0002.sarif" />
+    <EmbeddedResource Include="TestData\Partitioning\Partition\ExpectedOutputs\TST9999.sarif" />
+    <EmbeddedResource Include="TestData\Partitioning\Partition\Inputs\Partition.sarif" />
+    <None Include="v2\ConverterTestData\PREfast\Expected-021.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-021.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-022.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-022.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-039.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-039.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-075.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-075.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-076.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-076.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-077.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-078.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-078.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-205-amd64.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-205-amd64.cs</LastGenOutput>
+    </None>
+    <None Include="v2\ConverterTestData\PREfast\Expected-205.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Expected-205.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="v2\ConverterTestData\StaticDriverVerifier\isrroutine_bug1.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>isrroutine_bug1.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="v2\ConverterTestData\Fortify\src\bannedAPIs.java">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>bannedAPIs.cs</LastGenOutput>
+    </None>
+    <None Update="v2\ConverterTestData\PREfast\AB_IrrelevantBranch.cpp.xml">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AB_IrrelevantBranch.cpp.cs</LastGenOutput>
+    </None>
+    <None Update="v2\ConverterTestData\PREfast\AB_IrrelevantSwitch.cpp.xml">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AB_IrrelevantSwitch.cpp.cs</LastGenOutput>
+    </None>
+    <None Update="v2\ConverterTestData\PREfast\AN_FunctionAndInAnnotations.cpp.xml">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AN_FunctionAndInAnnotations.cpp.cs</LastGenOutput>
+    </None>
+    <None Update="v2\ConverterTestData\PREfast\src\C6001\expects.txt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>expects.cs</LastGenOutput>
+    </None>
+    <None Update="v2\ConverterTestData\PREfast\src\C6200\C6200Example.cpp">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>C6200Example.cs</LastGenOutput>
+    </None>
+    <None Update="v2\ConverterTestData\PREfast\src\ExpectedOutput\AA_PropertyAlias.xml">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AA_PropertyAlias.cs</LastGenOutput>
+    </None>
+    <None Update="v2\ConverterTestData\PREfast\src\ExpectedOutput\AM_BranchAndMaybeZero.xml">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AM_BranchAndMaybeZero.cs</LastGenOutput>
+    </None>
+    <None Update="v2\ConverterTestData\PREfast\TFS373273.cpp.xml">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TFS373273.cpp.cs</LastGenOutput>
+    </None>
+    <None Update="v2\ConverterTestData\StaticDriverVerifier\cancelspinlock_bug1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="v2\ConverterTestData\StaticDriverVerifier\checkadddevice_bug1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="v2\ConverterTestData\StaticDriverVerifier\checkdriverunload_bug1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="v2\ConverterTestData\StaticDriverVerifier\checkirpmjpnp_bug1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>checkirpmjpnp_bug1.cs</LastGenOutput>
+    </None>
+    <None Update="v2\ConverterTestData\StaticDriverVerifier\dispatchroutine_bug1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="v2\ConverterTestData\StaticDriverVerifier\iocompletion_bug1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="v2\ConverterTestData\StaticDriverVerifier\iodpcroutine_bug1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="v2\ConverterTestData\StaticDriverVerifier\isrroutine_bug1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>isrroutine_bug1.cs</LastGenOutput>
+    </None>
+    <None Update="v2\ConverterTestData\StaticDriverVerifier\src\sdv\rules\wdm\cancelspinlock.slic">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>cancelspinlock.cs</LastGenOutput>
+    </None>
+    <None Update="v2\ConverterTestData\StaticDriverVerifier\src\sdv\rules\wdm\startioroutine.h">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>startioroutine.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+</Project>

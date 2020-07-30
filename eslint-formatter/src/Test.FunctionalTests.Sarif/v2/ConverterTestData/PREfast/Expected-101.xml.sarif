@@ -1,0 +1,591 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "26015",
+          "message": {
+            "text": "Potential overflow using expression '(void *)(& f->arr)'\nBuffer access is apparently unbounded by the buffer size.  \n\nIn particular: cnt`10 is not constrained by (f->_FLEXARRAY::count)`10\n\nBuffer (f->_FLEXARRAY::arr) is a parameter to this function declared on line 10\nBuffer lengths are from an assumed __inout annotation on the parameter\nBuffer is of length 4*(f->_FLEXARRAY::count)`10 bytes [from type annotation SAL_writableTo(elementCount(f->count)) at c:\\somepath\\test101.cpp(7)]\nAccessing 4*cnt`10 bytes starting at byte offset 0\nAnnotation on function memcpy requires that {parameter 1} is of length >= {parameter 3} bytes\n  where {parameter 1} is (void *)(& f->arr); {parameter 3} is cnt * 4\n[Annotation _Out_(byteCount({parameter 3}))]\n\n\nValues of variables:\nPointer f is at offset 0 bytes from the start of f\ncnt = cnt`10\n\nwhere\n(f->_FLEXARRAY::count)`10 >= 1\ncnt`10 >= 1\n\nOverrun access occurs when\ncnt`10 >= (f->_FLEXARRAY::count)`10 + 1\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test101.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 11
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 0,
+                  "fullyQualifiedName": "bad1"
+                }
+              ],
+              "properties": {
+                "funcline": "10"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 10,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 12,
+                            "startColumn": 11
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26030",
+          "message": {
+            "text": "Postcondition violation that could result in overflow\nBuffer result.malloc created during call to malloc on line 28\nBuffer is of length 4*cnt`26 + 4 bytes [from annotation _Post_writable_byte_size_(byteCount({parameter 1})) on function malloc called at line 28]\nAccessing 4*cnt`26 + 8 bytes starting at byte offset 0\nAnnotation on function bad2 requires that result.bad2 is of length >= result.bad2->count * 4 + 4 bytes\n[Type annotation SAL_writableTo(byteCount(result.bad2->count * 4 + 4)) at c:\\somepath\\test101.cpp(7)]\n\n\nValues of variables:\n(f->_FLEXARRAY::count) = cnt`26 + 1\nPointer f is at offset 0 bytes from the start of the buffer\nresult.bad2 = f\n\nwhere\noffset(result.malloc)`28a == 0\ncnt`26 >= 1\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test101.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 5
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 1,
+                  "fullyQualifiedName": "bad2"
+                }
+              ],
+              "properties": {
+                "funcline": "26"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 26,
+                            "startColumn": 20
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "startColumn": 16
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "startColumn": 38
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 28,
+                            "startColumn": 20
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 29,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 30,
+                            "startColumn": 18
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "startColumn": 5
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26015",
+          "message": {
+            "text": "Potential overflow using expression '(void *)(& f->arr)'\nBuffer access is apparently unbounded by the buffer size.  \n\nIn particular: cnt`36 is not constrained by (f->_FLEXARRAY::count)`36\n\nBuffer (f->_FLEXARRAY::arr) is a parameter to this function declared on line 36\nBuffer lengths are from an assumed __inout annotation on the parameter\nBuffer is of length 4*(f->_FLEXARRAY::count)`36 bytes [from type annotation SAL_writableTo(elementCount(f->count)) at c:\\somepath\\test101.cpp(7)]\nAccessing 4*cnt`36 bytes starting at byte offset 0\nAnnotation on function memcpy requires that {parameter 1} is of length >= {parameter 3} bytes\n  where {parameter 1} is (void *)(& f->arr); {parameter 3} is cnt * 4\n[Annotation _Out_(byteCount({parameter 3}))]\n\n\nValues of variables:\nPointer f is at offset 0 bytes from the start of f\ncnt = cnt`36\n\nwhere\n(f->_FLEXARRAY::count)`36 >= 1\ncnt`36 >= 1\n\nOverrun access occurs when\ncnt`36 >= (f->_FLEXARRAY::count)`36 + 1\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test101.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 38,
+                  "startColumn": 15
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 2,
+                  "fullyQualifiedName": "Foo::what"
+                }
+              ],
+              "properties": {
+                "funcline": "36"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "startColumn": 10
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 38,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "26015",
+          "message": {
+            "text": "Potential overflow using expression '& f1'\nBuffer access is apparently unbounded by the buffer size.  \n\nIn particular: f1._FLEXARRAY::count`48 is not constrained by any constant\n\nBuffer accessed is f1\nBuffer is of length 8 bytes [size of variable]\nAccessing 4*f1._FLEXARRAY::count`48 + 4 bytes starting at byte offset 0\nAssumed __inout annotation on function Foo::what requires that {parameter 2} is of length >= {parameter 2}->count * 4 + 4 bytes\n  where {parameter 2} is & f1; {parameter 2} is & f1\n[Type annotation SAL_writableTo(byteCount({parameter 2}->count * 4 + 4)) at c:\\somepath\\test101.cpp(7)]\n\n\nValues of variables:\nf1._FLEXARRAY::count = f1._FLEXARRAY::count`48\n\nwhere\nf1._FLEXARRAY::count`48 >= 1\n\nOverrun access occurs when\nf1._FLEXARRAY::count`48 >= 2\n"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///c:/somepath/test101.cpp",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 59,
+                  "startColumn": 12
+                }
+              },
+              "logicalLocations": [
+                {
+                  "index": 3,
+                  "fullyQualifiedName": "main"
+                }
+              ],
+              "properties": {
+                "funcline": "42"
+              }
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 42,
+                            "startColumn": 6
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 44,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 44,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 45,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 46,
+                            "startColumn": 14
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 47,
+                            "startColumn": 15
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 48,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 50,
+                            "startColumn": 16
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 50,
+                            "startColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 50,
+                            "startColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 51,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "startColumn": 16
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "startColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 54,
+                            "startColumn": 25
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 55,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 58,
+                            "startColumn": 9
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///c:/somepath/test101.cpp",
+                            "index": 0
+                          },
+                          "region": {
+                            "startLine": 59,
+                            "startColumn": 12
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis"
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/somepath/test101.cpp"
+          }
+        }
+      ],
+      "logicalLocations": [
+        {
+          "fullyQualifiedName": "bad1",
+          "decoratedName": "?bad1@@YAXPAHIPAU_FLEXARRAY@@@Z"
+        },
+        {
+          "fullyQualifiedName": "bad2",
+          "decoratedName": "?bad2@@YAPAU_FLEXARRAY@@I@Z"
+        },
+        {
+          "name": "what",
+          "fullyQualifiedName": "Foo::what",
+          "decoratedName": "?what@Foo@@QAEXPAU_FLEXARRAY@@PAHI@Z"
+        },
+        {
+          "fullyQualifiedName": "main",
+          "decoratedName": "main"
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

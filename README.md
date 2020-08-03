@@ -34,3 +34,4 @@ This is a template repo, demonstrating GitHub's [Code Scanning capability](https
 - [SARIF support for code scanning](https://docs.github.com/en/github/finding-security-vulnerabilities-and-errors-in-your-code/sarif-support-for-code-scanning)
 - [Example workflow that runs the ESLint analysis tool](https://docs.github.com/en/github/finding-security-vulnerabilities-and-errors-in-your-code/uploading-a-sarif-file-to-github#example-workflow-that-runs-the-eslint-analysis-tool)
 - REST API: https://docs.github.com/en/rest/reference/code-scanning
+- Demo app for uploading SARIF reports to GitHub via the REST API as a GitHub App: https://github.com/swinton/github-app-upload-sarif

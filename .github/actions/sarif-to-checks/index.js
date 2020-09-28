@@ -9,7 +9,7 @@ async function main () {
     core.info(`sarifPath: ${ sarifPath }`);
 
     // Process SARIF
-    const results = sarif.runs[0].results;
+    const results = data.runs[0].results;
     await Promise.all(results.map(async result => {
       console.log(JSON.stringify(result, null, 4));
       return result;

@@ -277,6 +277,8 @@ async function main () {
       status: 'completed',
       conclusion: results.length === 0 ? 'success' : 'failure',
       output: {
+        title: name,
+        summary: `${ name } analysis`,
         annotations
       }
     });

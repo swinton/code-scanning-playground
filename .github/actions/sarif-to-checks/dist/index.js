@@ -246,6 +246,7 @@ async function main () {
     core.info(`sarifPath: ${ sarifPath }`);
 
     // Process SARIF
+    const results = data.runs[0].results;
     const [ owner, repo ] = process.env.GITHUB_REPOSITORY.split('/');
     const name = data.runs[0].tool.driver.name;
 

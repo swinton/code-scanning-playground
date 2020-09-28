@@ -11,6 +11,15 @@ annotationLevelFromResultLevel = (resultLevel) => {
   return resultLevelMap[resultLevel];
 };
 
+pathRelativeToGitHubWorkspace = (absolutePath) => {
+  const fileProtocolRegexp = /^file:\/\//i;
+  const leadingSlashRegexp = /^\//;
+  return absolutePath
+    .replace(fileProtocolRegexp, '')
+    .replace(process.env.GITHUB_WORKSPACE, '')
+    .replace(leadingSlashRegexp, '');
+}
+
 async function main () {
   try {
     // Load SARIF
@@ -27,7 +36,7 @@ async function main () {
       const location = result.locations[0].physicalLocation;
 
       return {
-        path: location.artifactLocation.uri,
+        path: pathRelativeToGitHubWorkspace(location.artifactLocation.uri),
         start_line: location.region.startLine,
         end_line: location.region.endLine || location.region.startLine,
         start_column: location.region.startColumn,

@@ -25,6 +25,8 @@ jobs:
       uses: ./.github/actions/sarif-to-checks
       with:
         sarif_file: results.sarif.json
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Expose report
       uses: actions/upload-artifact@v2

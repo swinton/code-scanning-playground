@@ -13,6 +13,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - run: |
+        ls -ltrR $GITHUB_WORKSPACE
+
     - name: Run npm install
       run: npm install
     # Runs the ESlint code analysis

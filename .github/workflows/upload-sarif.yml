@@ -1,4 +1,4 @@
-name: "ESLint analysis"
+name: "Code scanning"
 
 # Run workflow each time code is pushed to your repository and on a schedule.
 # The scheduled workflow runs every at 00:00 on Sunday UTC time.
@@ -12,17 +12,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+
     - name: Run npm install
       run: npm install
+
     # Runs the ESlint code analysis
     - name: Run ESLint
       # eslint exits 1 if it finds anything to report
       run: npm run lint || true
+
+    # Captures results in the SARIF report as a check run
+    - name: SARIF to Checks
+      uses: ./.github/actions/sarif-to-check-run
+      with:
+        sarif_file: results.sarif.json
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Expose report
       uses: actions/upload-artifact@v2
       with:
         name: SARIF results
         path: results.sarif.json
+
     # Uploads results.sarif to GitHub repository using the upload-sarif action
     - uses: github/codeql-action/upload-sarif@v1
       with:

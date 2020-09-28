@@ -1,0 +1,9 @@
+name: SARIF to Checks
+description: Accepts a SARIF file as input, and generates Checks for each result found
+inputs:
+  sarif_file:
+    description: The SARIF file or directory of SARIF files to be uploaded, relative to $GITHUB_WORKSPACE.
+    required: true
+runs:
+  using: node12
+  main: dist/index.js

@@ -3,10 +3,17 @@ const core = require('@actions/core');
 
 async function main () {
   try {
+    // Load SARIF
     const sarifPath = core.getInput('sarif_file');
     const data = require(path.join(process.env.GITHUB_WORKSPACE, sarifPath));
     core.info(`sarifPath: ${ sarifPath }`);
-    core.info(`data: ${ JSON.stringify(data, null, 4)}`);
+
+    // Process SARIF
+    const results = sarif.runs[0].results;
+    await Promise.all(results.map(async result => {
+      console.log(JSON.stringify(result, null, 4));
+      return result;
+    }));
   } catch (e) {
     core.setFailed(e);
   }

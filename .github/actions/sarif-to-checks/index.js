@@ -1,5 +1,6 @@
 const path = require('path');
 const core = require('@actions/core');
+const github = require('@actions/github').getOctokit(process.env.GITHUB_TOKEN);
 
 async function main () {
   try {

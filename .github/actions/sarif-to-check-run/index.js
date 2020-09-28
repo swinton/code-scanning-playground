@@ -22,6 +22,8 @@ pathRelativeToGitHubWorkspace = (absolutePath) => {
 
 async function main () {
   try {
+    const [ owner, repo ] = process.env.GITHUB_REPOSITORY.split('/');
+
     // Load SARIF
     const sarifPath = core.getInput('sarif_file');
     const data = require(path.join(process.env.GITHUB_WORKSPACE, sarifPath));

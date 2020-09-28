@@ -22,6 +22,18 @@ pathRelativeToGitHubWorkspace = (absolutePath) => {
 
 async function main () {
   try {
+    // Create a check suite
+    const [ owner, repo ] = process.env.GITHUB_REPOSITORY.split('/');
+    const { data: checkSuite } = await github.request("POST /repos/:owner/:repo/check-suites", {
+      mediaType: {
+        previews: ['antiope']
+      },
+      owner,
+      repo,
+      head_sha: process.env.GITHUB_SHA
+    });
+    core.info(`Check suite created: ${ checkSuite }.`);
+
     // Load SARIF
     const sarifPath = core.getInput('sarif_file');
     const data = require(path.join(process.env.GITHUB_WORKSPACE, sarifPath));
@@ -29,7 +41,6 @@ async function main () {
 
     // Process SARIF
     const results = data.runs[0].results;
-    const [ owner, repo ] = process.env.GITHUB_REPOSITORY.split('/');
     const name = data.runs[0].tool.driver.name;
 
     const annotations = await Promise.all(results.map(async result => {
